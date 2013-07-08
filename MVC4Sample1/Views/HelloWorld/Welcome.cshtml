@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Welcome";
+}
+
+<h2>Welcome</h2>
+
+<p>Well Well Well...so I can die eaaaasy</p>
+
+<ul>
+    @{
+        
+        for(int i = 0; i < ViewBag.numTimes; i++)
+        {
+            <li>msg: @ViewBag.Message</li>
+        }
+    }
+</ul>
