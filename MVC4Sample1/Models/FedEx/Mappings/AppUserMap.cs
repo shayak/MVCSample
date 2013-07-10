@@ -7,13 +7,13 @@ using MVC4Sample1.Models.FedEx.Users;
 
 namespace MVC4Sample1.Models.FedEx.Mappings
 {
-    public class RightNowUserMap : ClassMap<RightNowUser>
+    public class AppUserMap : ClassMap<AppUser>
     {
-        public RightNowUserMap()
+        public AppUserMap()
         {
             Id(x => x.Id);
-            Map(x => x.RnUsername);
-            Map(x => x.RnPassword);
+            HasOne(x => x.RightNowId);
+            HasOne(x => x.EloquaId);
         }
     }
 }

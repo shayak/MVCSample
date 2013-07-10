@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using MVC4Sample1.Models.FedEx;
 using FluentNHibernate.Mapping;
-using MVC4Sample1.Models.FedEx.Users;
 
 namespace MVC4Sample1.Models.FedEx.Mappings
 {
-    public class RightNowUserMap : ClassMap<RightNowUser>
+    public class ScheduleMap : ClassMap<Schedule>
     {
-        public RightNowUserMap()
+        public ScheduleMap()
         {
             Id(x => x.Id);
-            Map(x => x.RnUsername);
-            Map(x => x.RnPassword);
+            Map(x => x.IntervalInMinutes);
+            Map(x => x.NextRunTime);
         }
     }
 }
